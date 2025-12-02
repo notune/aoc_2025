@@ -48,7 +48,7 @@ fn part2(input: &str) {
             for n in 1..num_digits/2+1 { // n = size of parts
                 if num_digits % n == 0 {
                     let mut mod_num = u64::pow(10, num_digits);
-                    let mut div_num = u64::pow(10, num_digits-n+1) / 10;
+                    let mut div_num = u64::pow(10, num_digits-n);
                     let mut previous_part = (i % mod_num) / div_num;
                     for digit in 1..num_digits/n+1 { // iterate through parts
                         let current_part = (i % mod_num) / div_num;
