@@ -55,15 +55,15 @@ fn parts(input: &str) {
             //empty the vec instead of removing so that other indices stay the same
             circuits[i2] = vec![];
         }
-    if num_connections == 999 {
-        let mut result = 1;
-        let mut temp_circ = circuits.clone();
-        temp_circ.sort_by(|a, b| b.len().cmp(&a.len()));
-        for i in 0..3 {
-            result *= temp_circ[i].len();
+        if num_connections == 999 {
+            let mut result = 1;
+            let mut temp_circ = circuits.clone();
+            temp_circ.sort_by(|a, b| b.len().cmp(&a.len()));
+            for i in 0..3 {
+                result *= temp_circ[i].len();
+            }
+            println!("Part 1: {}", result);
         }
-        println!("Part 1: {}", result);
-    }
         num_connections += 1;
     }
 
